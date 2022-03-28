@@ -12,7 +12,7 @@ function App() {
     setCounter((count) => count + 1);
     // can also just do this:
     // let newCount = counter + 1
-    // setCounter(count)
+    // setCounter(newCount)
   };
 
   //decrease counter
