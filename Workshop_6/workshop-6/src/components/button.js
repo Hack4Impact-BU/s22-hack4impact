@@ -4,6 +4,7 @@ function Button(props) {
       style={{
         backgroundColor: props.color,
       }}
+      onClick={props.myClick}
     >
       {props.text}
     </button>

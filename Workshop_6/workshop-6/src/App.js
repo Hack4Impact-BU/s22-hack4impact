@@ -10,6 +10,9 @@ function App() {
   //increase counter
   const increase = () => {
     setCounter((count) => count + 1);
+    // can also just do this:
+    // let newCount = counter + 1
+    // setCounter(count)
   };
 
   //decrease counter
@@ -27,11 +30,11 @@ function App() {
       <Header />
       {/* passing in props, e.g. initial value / information you want to pass in like params */}
       <Counter count={counter} />
-      <View style={{justifyContent: 'center'}}>
-        <Button color="pink" text="Increment" onClick={increase} />
-        <Button color="green" text="Decrement" onClick={decrease} />
-        <Button color="red" text="Reset" onClick={reset} />
-      </View>
+      <div style={{justifyContent: 'center', display:'flex', textAlign:'center'}}>
+        <Button color="pink" text="Increment" myClick={increase} /> 
+        <Button color="green" text="Decrement" myClick={decrease} />
+        <Button color="red" text="Reset" myClick={reset} />
+      </div>
     </div>
   );
 }
