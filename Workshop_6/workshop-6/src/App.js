@@ -30,8 +30,10 @@ function App() {
       <Header />
       {/* passing in props, e.g. initial value / information you want to pass in like params */}
       <Counter count={counter} />
-      <div style={{justifyContent: 'center', display:'flex', textAlign:'center'}}>
-        <Button color="pink" text="Increment" myClick={increase} /> 
+      <div
+        style={{justifyContent: 'center', display: 'flex', textAlign: 'center'}}
+      >
+        <Button color="pink" text="Increment" myClick={increase} />
         <Button color="green" text="Decrement" myClick={decrease} />
         <Button color="red" text="Reset" myClick={reset} />
       </div>
