@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import './App.css';
 import Home from './components/Home';
 import Signin from './components/SignIn';
 import {auth} from './firebase';
@@ -23,7 +24,7 @@ function App() {
     });
     return unsubscribe;
   }, []);
-  return <div className="App">{user ? <Home u={user.email} /> : <Signin />}</div>;
+  return <div className="App">{user ? <Home /> : <Signin />}</div>;
 }
 
 export default App;
