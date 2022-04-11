@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import './App.css';
 import Home from './components/Home';
 import Signin from './components/SignIn';
 import {auth} from './firebase';
