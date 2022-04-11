@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import {auth} from '../firebase';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import './SignIn.css';
 const Signin = () => {
   // 2. create hooks
@@ -8,8 +9,8 @@ const Signin = () => {
   // prevent page from refreshing
   const signUp = (e) => {
     e.preventDefault();
-    auth
-      .createUserWithEmailAndPassword(
+    createUserWithEmailAndPassword(
+        auth,
         emailRef.current.value,
         passwordRef.current.value
       )
@@ -22,8 +23,8 @@ const Signin = () => {
   };
   const signIn = (e) => {
     e.preventDefault();
-    auth
-      .signInWithEmailAndPassword(
+    signInWithEmailAndPassword(
+        auth,
         emailRef.current.value,
         passwordRef.current.value
       )
@@ -44,9 +45,9 @@ const Signin = () => {
         <button onClick={signIn}>Sign in </button>
         <h6>
           Not yet register?{' '}
-          <span onClick={signUp} className="signin__link">
+          <button onClick={signUp} className="signin__link">
             Sign up
-          </span>
+          </button>
         </h6>
       </form>
     </div>
