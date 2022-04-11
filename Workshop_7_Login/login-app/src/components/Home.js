@@ -1,10 +1,10 @@
 import React from 'react';
 import {auth} from '../firebase';
 
-const Home = () => {
+const Home = ({u}) => {
   return (
     <div>
-      <h1>Welcome home</h1>
+      <h1>Welcome home, {u}</h1>
       <p>
         <button onClick={() => auth.signOut()}>Sign out</button>
       </p>

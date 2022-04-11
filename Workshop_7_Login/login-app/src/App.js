@@ -23,7 +23,7 @@ function App() {
     });
     return unsubscribe;
   }, []);
-  return <div className="App">{user ? <Home /> : <Signin />}</div>;
+  return <div className="App">{user ? <Home u={user.email} /> : <Signin />}</div>;
 }
 
 export default App;
