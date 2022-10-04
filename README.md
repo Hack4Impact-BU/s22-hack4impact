@@ -19,6 +19,6 @@ Week 7 - Firebase
 - Create a login application with firebase as backend
 
 Week 8 - API
-- Create a simple application with API, grabing data from api 
+- Create a simple application with RESTful API, grabing data from api 
 
 To start a react application, you can use "npm start" 
